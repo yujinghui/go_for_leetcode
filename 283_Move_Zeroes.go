@@ -12,6 +12,7 @@
  */
 package main
 
+import "fmt"
 // my solution
 func moveZeroes(nums []int) {
 	lastNonZeroAt := 0
@@ -26,11 +27,11 @@ func moveZeroes(nums []int) {
 	}
 }
 
-/*
-func main() {
+
+func main283() {
 	nums := []int{0, 0, 1}
 	fmt.Println(nums)
 	moveZeroes(nums)
 	fmt.Println(nums)
 }
-*/
+

@@ -14,7 +14,7 @@ Output: 2
  * @Author: yujinghui
  * @Date: 2018-09-27 20:44:36
  * @Last Modified by: yujinghui
- * @Last Modified time: 2018-09-28 14:30:55
+ * @Last Modified time: 2018-09-29 09:28:04
 */
 package main
 
@@ -26,7 +26,7 @@ func majorityElement(nums []int) int {
 	countmap := make(map[int]int)
 	for i := 0; i < len(nums); i++ {
 		key := nums[i]
-		count,_ := countmap[key]
+		count, _ := countmap[key]
 		countmap[key] = 1 + count
 	}
 
@@ -38,7 +38,7 @@ func majorityElement(nums []int) int {
 	return 1
 }
 
-func main() {
+func main169() {
 	nums := []int{1}
 	fmt.Println(majorityElement(nums))
 }

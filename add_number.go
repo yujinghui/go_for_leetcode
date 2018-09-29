@@ -8,7 +8,7 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 */
-
+import "fmt"
 func twoSum(nums []int, target int) []int {
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
@@ -20,11 +20,11 @@ func twoSum(nums []int, target int) []int {
 	return []int{}
 }
 
-/*
-func main() {
+
+func mainadd() {
 	nums := []int{2, 7, 11, 15}
 	target := 29
 	res := twoSum(nums, target)
 	fmt.Printf("[%v, %v]\n", res[0], res[1])
 }
-*/
+
