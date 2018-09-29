@@ -19,9 +19,15 @@ import (
 )
 
 func countPrimes(n int) int {
-	for i := 0; i <= n; i++ {
-		fmt.Println(i)
+	intarray := make([]int, n+1)
+	for i:=1;i<=n;i++{
+		intarray[i] = i
 	}
+	for i := 0; i <= n; i++ {
+		
+	}
+	fmt.Println(intarray)
+	return 0
 }
 
 func main() {
