@@ -21,18 +21,15 @@ Explanation: There are three ways to climb to the top.
 2. 1 step + 2 steps
 3. 2 steps + 1 step
 
- * @Author: yujinghui 
- * @Date: 2018-09-29 20:34:26 
- * @Last Modified by:   yujinghui 
- * @Last Modified time: 2018-09-29 20:34:26 
- */
+ * @Author: yujinghui
+ * @Date: 2018-09-29 20:34:26
+ * @Last Modified by: yujinghui
+ * @Last Modified time: 2018-09-30 10:11:06
+*/
 package main
 
+import "fmt"
 
-func climbStairs(n int) int {
-    
-}
-
-func main(){
-
+func main70() {
+	fmt.Println(climbStairs(3))
 }

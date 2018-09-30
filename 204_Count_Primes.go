@@ -22,6 +22,6 @@ import (
 func countPrimes(n int) int {
 }
 
-func main() {
+func main204() {
 	fmt.Println(countPrimes(10))
 }
