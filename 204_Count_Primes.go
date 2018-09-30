@@ -16,20 +16,12 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func countPrimes(n int) int {
-	intarray := make([]int, n+1)
-	for i:=1;i<=n;i++{
-		intarray[i] = i
-	}
-	for i := 0; i <= n; i++ {
-		
-	}
-	fmt.Println(intarray)
-	return 0
 }
 
 func main() {
-	countPrimes(4)
+	fmt.Println(countPrimes(10))
 }

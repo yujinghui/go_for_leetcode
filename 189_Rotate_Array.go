@@ -44,7 +44,7 @@ func rotate(nums []int, k int) {
 	}
 }
 
-func main155() {
+func main189() {
 	nums := []int{5, 2}
 	rotate(nums, 1)
 	fmt.Println(nums)
