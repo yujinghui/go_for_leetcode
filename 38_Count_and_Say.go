@@ -9,6 +9,7 @@ The count-and-say sequence is the sequence of integers with the first five terms
 6.     312211
 7.     13112221
 8.     1113213211
+9.     31131211131221
 1 is read off as "one 1" or 11.
 11 is read off as "two 1s" or 21.
 21 is read off as "one 2, then one 1" or 1211.
@@ -34,22 +35,44 @@ Output: "1211"
 */
 package main
 
-import (
-	"strings"
-	"fmt"
-)
+import "strconv"
 
 func countAndSay(n int) string {
 	if n == 1 {
 		return "1"
 	}
-	currentStr = countAndSay(n - 1)
-	finalStr := ""
-	for i, val := range  correntStr {
-		if i == strings.Count(s string, substr string)currentStr
+
+	if n == 2 {
+		return "11"
 	}
+
+	saystr := countAndSay(n - 1)
+	newStr := ""
+	count := 1
+	for index := range saystr {
+		if index == len(saystr)-2 {
+			if saystr[index] != saystr[index+1] {
+				newStr = newStr + strconv.Itoa(count) + string(saystr[index]) + "1" + string(saystr[index+1])
+			} else {
+				newStr = newStr + strconv.Itoa(count+1) + string(saystr[index])
+			}
+			break
+		}
+		if saystr[index] != saystr[index+1] {
+			newStr = newStr + strconv.Itoa(count) + string(saystr[index])
+			count = 1
+		} else {
+			count++
+		}
+	}
+	return newStr
 }
 
 func main() {
-	fmt.Println(countAndSay(4))
+	println("--------->" + countAndSay(7))
+	// str := "hello, world"
+	// println(len(str))
+	// for index := range str {
+	// print(str[index])
+	// }
 }
