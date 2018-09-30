@@ -11,17 +11,36 @@ Follow up:
 
 If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+solution1:
+
+solution2:
+
+
  * @Author: yujinghui
  * @Date: 2018-09-30 10:24:18
  * @Last Modified by: yujinghui
- * @Last Modified time: 2018-09-30 10:24:40
+ * @Last Modified time: 2018-09-30 11:43:54
 */
 package main
 
-func maxSubArray(nums []int) int {
+import (
+	"fmt"
+	"math"
+)
 
+func maxSubArray(nums []int) int {
+	var largestSum float64 = -math.MaxFloat64
+	var currentSum float64 = -math.MaxFloat64
+	for i := 0; i < len(nums); i++ {
+		currentSum = math.Max(currentSum+float64(nums[i]), float64(nums[i]))
+		largestSum = math.Max(largestSum, currentSum)
+	}
+	return int(largestSum)
 }
 
 func main() {
-
+	fmt.Println(maxSubArray([]int{-1}))
 }
