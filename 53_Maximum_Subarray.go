@@ -41,6 +41,6 @@ func maxSubArray(nums []int) int {
 	return int(largestSum)
 }
 
-func main() {
+func main53() {
 	fmt.Println(maxSubArray([]int{-1}))
 }

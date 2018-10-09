@@ -16,10 +16,10 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func countPrimes(n int) int {
+	return 0
 }
 
 func main204() {
